@@ -33,6 +33,24 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Org.Mentalis.Security">
+      <HintPath>Dependencies\Org.Mentalis.Security.dll</HintPath>
+    </Reference>
+    <Reference Include="Sonic.Client">
+      <HintPath>Dependencies\Sonic.Client.dll</HintPath>
+    </Reference>
+    <Reference Include="Sonic.Client.Jms.Impl">
+      <HintPath>Dependencies\Sonic.Client.Jms.Impl.dll</HintPath>
+    </Reference>
+    <Reference Include="Sonic.Jms">
+      <HintPath>Dependencies\Sonic.Jms.dll</HintPath>
+    </Reference>
+    <Reference Include="Sonic.Jms.Cf.Impl">
+      <HintPath>Dependencies\Sonic.Jms.Cf.Impl.dll</HintPath>
+    </Reference>
+    <Reference Include="Sonic.Security">
+      <HintPath>Dependencies\Sonic.Security.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -48,6 +66,16 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Publisher\Sonic.Publisher.csproj">
+      <Project>{924c3082-5c3e-405d-91aa-c6c7bc64c612}</Project>
+      <Name>Sonic.Publisher</Name>
+    </ProjectReference>
+    <ProjectReference Include="Consumer\Sonic.Consumer.csproj">
+      <Project>{b8a54f03-b10a-4b39-86ce-b96ee8ebd027}</Project>
+      <Name>Sonic.Consumer</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

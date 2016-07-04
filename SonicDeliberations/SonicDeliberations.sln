@@ -5,9 +5,9 @@ VisualStudioVersion = 14.0.25123.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SonicDeliberations", "SonicDeliberations.csproj", "{E6342408-220B-4975-AF2A-91223BC9FD5D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Publisher", "..\Publisher\Publisher.csproj", "{924C3082-5C3E-405D-91AA-C6C7BC64C612}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sonic.Publisher", "..\Publisher\Sonic.Publisher.csproj", "{924C3082-5C3E-405D-91AA-C6C7BC64C612}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Consumer", "Consumer\Consumer.csproj", "{B8A54F03-B10A-4B39-86CE-B96EE8EBD027}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sonic.Consumer", "Consumer\Sonic.Consumer.csproj", "{B8A54F03-B10A-4B39-86CE-B96EE8EBD027}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
