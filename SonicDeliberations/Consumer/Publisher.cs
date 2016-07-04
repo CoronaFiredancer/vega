@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Consumer
 {
-	class Program
+	class Publisher
 	{
 		static void Main(string[] args)
 		{
