@@ -6,7 +6,6 @@ namespace SonicDeliberations
 	public class Driver
 	{
 		private static string _broker;
-		private static string _queue;
 		private static string _user;
 		private static string _password;
 
@@ -14,22 +13,29 @@ namespace SonicDeliberations
 
 		public static void Main(string[] args)
 		{
+			_broker = "localhost:2506";
+			_user = "";
+			_password = "";
+
 			var connection = Connect();
 
 
 			if (connection != null)
 			{
-				Publisher.Publisher.Publish(connection, "hej hej"); 
+				var published = Publisher.Publisher.Publish(connection, "Hej hej Pindsvin", "SampleQ2");
+
+				if (published)
+				{
+					var reply = Consumer.Consumer.Consume(connection, "SampleQ2");
+				}
 			}
 
-			Consumer.Consumer.Consume();
+			
 		}
 
 		public static Connection Connect()
 		{
 			Connection connect;
-			
-			MessageProducer requestProducer = null;
 
 			try
 			{
