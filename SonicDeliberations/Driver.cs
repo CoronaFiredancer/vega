@@ -13,9 +13,9 @@ namespace SonicDeliberations
 
 		public static void Main(string[] args)
 		{
-			_broker = "localhost:2506";
-			_user = "";
-			_password = "";
+			_broker = "SonicQueue";
+			_user = "Administrator";
+			_password = "Administrator";
 
 			var connection = Connect();
 
