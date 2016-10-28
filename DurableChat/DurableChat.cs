@@ -45,10 +45,11 @@ namespace DurableChat
 {
 	public sealed class DurableChat : MessageListener
 	{
-		private const string AppTopic = "jms.samples.durablechat";
+		private const string AppTopic = "Kamstrup_DEV_Carsten.Aras";
+		//private const string AppTopic = "jms.samples.durablechat";
 		//private const string PropertyName = "Department";
-		private const string DefaultBrokerName = "localhost:2506";
-		private const string DefaultPassword = "password";
+		private const string DefaultBrokerName = "SonicQueue";
+		private const string DefaultPassword = "Administrator";
 		private const string ClientId = "DurableChatter";
 		private const long MessageLifespan = 1800000; //30 minutes
 
@@ -64,6 +65,7 @@ namespace DurableChat
 			// Create a connection:
 			try
 			{
+				username = "Administrator";
 				ConnectionFactory factory = (new Sonic.Jms.Cf.Impl.ConnectionFactory(broker));
 				_connection = factory.createConnection(username, password);
 				// Durable Subscriptions are indexed by username, clientID and 
@@ -142,21 +144,6 @@ namespace DurableChat
 			}
 		}
 
-		// Cleanup resources and then exit. 
-		private void Exit()
-		{
-			try
-			{
-				_connection?.close();
-			}
-			catch (Exception e)
-			{
-				Console.Error.WriteLine("Failure in closing connection - " + e.Message);
-			}
-
-			Environment.Exit(0);
-		}
-
 		/// <summary>
 		/// Message Handler*
 		/// </summary>
@@ -178,10 +165,27 @@ namespace DurableChat
 			}
 		}
 
+
+
 		//
 		// NOTE: the remainder of this sample deals with reading arguments
 		// and does not utilize any JMS classes or code.
 		//
+
+		// Cleanup resources and then exit. 
+		private void Exit()
+		{
+			try
+			{
+				_connection?.close();
+			}
+			catch (Exception e)
+			{
+				Console.Error.WriteLine("Failure in closing connection - " + e.Message);
+			}
+
+			Environment.Exit(0);
+		}
 
 		/// <summary>
 		/// Main program entry point. 
